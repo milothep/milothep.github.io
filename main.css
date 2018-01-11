@@ -1,3 +1,51 @@
-html {
+body {
   background-color: black;
+}
+
+ul {
+list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.Projects {
+  font-family: Helvetica;
+  font-size: 18px;
+  color: white;
+  line-height: 2.5em;
+  width: 600px;
+  position: relative;
+  left: 45%;
+  transform: translateY(80%);
+}
+
+#Image {
+  position: absolute;
+	max-width: 80%;
+	top: 10%;
+	left: 10%;
+	border-radius: 3px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+  z-index: -1;
+}
+
+#Image:empty {
+  top: 50%;
+	left: 35%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+@media screen and (orientation: portrait) {
+  #Image { max-width: 90%; }
+}
+
+@media screen and (orientation: landscape) {
+  #Image { max-height: 90%; }
 }
